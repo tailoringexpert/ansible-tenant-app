@@ -1,0 +1,20 @@
+---
+- name: restart app
+  service: 
+    name: tailoringexpert
+    state: restarted
+  become: true
+  remote_user: "{{ sudo_user | default('root') }}"
+  notify: wait for app
+
+- name: wait for app
+  uri:
+    url: "{{ app.protocol }}://localhost:{{ app.port }}/api/actuator/info"
+    method: GET
+    validate_certs: false
+  register: _result
+  until: _result.status == 200
+  retries: 24
+  delay: 5
+  
+  

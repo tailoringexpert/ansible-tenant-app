@@ -1,0 +1,13 @@
+---       
+- name: Install tenant libs
+  unarchive:
+    src: "{{ tenant.file.src }}"
+    dest: "{{ app.home }}"
+    remote_src: "{{ tenant.file.remote_src | default('no') }}"
+    owner: "{{ user }}"
+    group: "{{ group }}"    
+  when: tenant.file is defined   
+  notify: restart app
+  
+- meta: flush_handlers
+  tags: always     

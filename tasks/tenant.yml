@@ -1,0 +1,7 @@
+---       
+- name: Create db.properties
+  include_tasks: dbproperties.yml
+
+- name: Install tenant libs
+  include_tasks: lib.yml
+ 

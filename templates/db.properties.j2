@@ -1,0 +1,8 @@
+# {{ ansible_managed }}
+id={{ tenant.name }}
+name={{ tenant.name }}
+type=org.springframework.jdbc.datasource.DriverManagerDataSource
+spring.datasource.driver-class-name={{ tenant.datasource.driver }}
+spring.datasource.url={{ tenant.datasource.url }}
+spring.datasource.username={{ tenant.datasource.username }}
+spring.datasource.password=ENC({{ tenant.datasource.password }})
