@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  role_name: "tailoringexpert-tenant-app"
+  author: 
+    - "Michael Bädorf"
+  description: "Role for installing tenant libs"
+  license: "Apache-2.0"
+  min_ansible_version: "2.5"
+  repository : "https://github.com/tailoringexpert/ansible-tenant-app"
+
+  platforms:
+
+  galaxy_tags:
+
+
+dependencies: []

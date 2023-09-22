@@ -1,0 +1,6 @@
+---
+- name: "{{ tenant.name | upper }} | create {{ tenant.name | lower }}.properties"
+  template:
+    src: db.properties.j2
+    dest: "{{ app.db }}/{{ tenant.name | lower }}.properties"
+    mode: 0644 

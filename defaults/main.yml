@@ -1,0 +1,24 @@
+---
+app_port: 8080
+app_protocol: http
+
+app_home: "/app"
+app_db: "{{ app_home }}/db"
+
+  
+app_directories: [ 
+  "{{ app_home }}",
+  "{{ app_db }}" 
+]  
+
+tenants: []  
+#  - name: tenant
+#    datasource:
+#      driver: org.mariadb.jdbc.Driver
+#      dialect: org.hibernate.dialect.MariaDBDialect
+#      url: jdbc:mariadb://{{ db_host_url }}/tailoringexpert_tenant
+#      username: tailoringexpert_tenant
+#      password: "{{ datasource_tenant_password }}"	        
+#    file:
+#      src: "{{ app_version }}/demo/tailoringexpert-tenant-distribution-{{ app_version }}{{ app_snapshot }}-lib.zip"
+#      remote_src: no   

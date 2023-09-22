@@ -1,0 +1,7 @@
+---  
+app:
+  home: "{{ app_home }}"
+  port: "{{ app_port }}"  
+  protocol: "{{ app_protocol }}"
+  db: "{{ app_db }}"
+  
